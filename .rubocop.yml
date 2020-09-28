@@ -1,0 +1,19 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - "vendor/**/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "tmp/**/*"
+    - ".git/**/*"
+    - "db/**/*"
+    - "config/**/*"
+    - "bin/*"
+  DisplayCopNames: true
+  NewCops: enable
+  RunRailsCops: true
+
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
