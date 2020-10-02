@@ -12,7 +12,22 @@ AllCops:
     - "bin/*"
   DisplayCopNames: true
   NewCops: enable
-  RunRailsCops: true
+  #RunRailsCops: true
+  
+# クラスのコメント必須を無視
+Documentation:
+  Enabled: false
+  
+# モジュール名::クラス名の定義を許可
+ClassAndModuleChildren:
+  Enabled: false
+  
+# 文字リテラルのイミュータブル宣言を無視（freezeになるのはRuby3以降）
+Style/FrozenStringLiteralComment:
+  Enabled: false
+  
+Style/StringConcatenation:
+  Enabled: false
 
 # 日本語のコメントを許可する
 Style/AsciiComments:
