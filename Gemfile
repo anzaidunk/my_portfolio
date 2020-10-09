@@ -5,6 +5,8 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
 gem 'mysql2', '>= 0.3.18', '< 0.6.0' # DB変更
@@ -12,12 +14,13 @@ gem 'mysql2', '>= 0.3.18', '< 0.6.0' # DB変更
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
+#gem 'sass-rails', '>= 6'
+gem 'sassc-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 
-# gem 'uglifier',     '3.2.0'
-# gem 'coffee-rails', '4.2.2'
+gem 'coffee-rails', '4.2.2'
+gem 'uglifier',     '3.2.0'
 # gem 'jquery-rails', '4.3.1'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -46,10 +49,10 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'pre-commit'
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'pre-commit'
 end
 
 group :test do

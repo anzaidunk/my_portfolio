@@ -12,7 +12,21 @@ AllCops:
     - "bin/*"
   DisplayCopNames: true
   NewCops: enable
-  RunRailsCops: true
+  
+# Use nested module/class definitions instead of compact style. を無視
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# Missing top-level class documentation comment. を無視
+Style/Documentation:
+  Enabled: false
+
+# Missing magic comment # frozen_string_literal: true. を無視
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringConcatenation:  
+  Enabled: false
 
 # 日本語のコメントを許可する
 Style/AsciiComments:

@@ -1,0 +1,60 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+body {
+  // font-size: 20px;
+}
+
+// header
+
+.top-menu {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  padding: 1.3rem 0;
+  
+}
+
+.container {
+  font-size: 1.2rem;
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+}
+
+.navbar-right {
+  height: 3rem;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  li {
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+.center {
+  text-align: center;
+  width: 800px;
+  margin:100px auto;
+}
+
+.recruit-login {
+  border: .3rem solid black;
+  height: 50rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.4rem 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: .9rem;
+}
