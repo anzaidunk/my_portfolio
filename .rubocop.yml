@@ -12,7 +12,7 @@ AllCops:
     - "bin/*"
   DisplayCopNames: true
   NewCops: enable
-  #RunRailsCops: true
+
   
 # クラスのコメント必須を無視
 Documentation:
@@ -27,6 +27,7 @@ Style/FrozenStringLiteralComment:
   Enabled: false
   
 Style/StringConcatenation:
+
   Enabled: false
 
 # 日本語のコメントを許可する
