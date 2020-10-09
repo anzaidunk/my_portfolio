@@ -12,20 +12,22 @@ AllCops:
     - "bin/*"
   DisplayCopNames: true
   NewCops: enable
+
   
-# Use nested module/class definitions instead of compact style. を無視
-Style/ClassAndModuleChildren:
+# クラスのコメント必須を無視
+Documentation:
   Enabled: false
-
-# Missing top-level class documentation comment. を無視
-Style/Documentation:
+  
+# モジュール名::クラス名の定義を許可
+ClassAndModuleChildren:
   Enabled: false
-
-# Missing magic comment # frozen_string_literal: true. を無視
+  
+# 文字リテラルのイミュータブル宣言を無視（freezeになるのはRuby3以降）
 Style/FrozenStringLiteralComment:
   Enabled: false
+  
+Style/StringConcatenation:
 
-Style/StringConcatenation:  
   Enabled: false
 
 # 日本語のコメントを許可する
