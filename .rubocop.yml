@@ -12,8 +12,8 @@ AllCops:
     - "bin/*"
   DisplayCopNames: true
   NewCops: enable
-  
-  
+
+
 # クラスのコメント必須を無視
 Documentation:
   Enabled: false

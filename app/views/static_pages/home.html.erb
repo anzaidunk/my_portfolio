@@ -1,2 +1,30 @@
-<h1>homepage</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+<div class="center recruit-login" >
+  <h1>【採用担当者様　専用ログインフォーム】</h1>
+  <h2>
+    下記の「専用ログイン」ボタンを押していただければ、
+    <br>
+    すぐに専用アカウントでログインが可能です。
+  </h2>
+  <%#= form_for() do |f| %>
+    
+    <%#= f.label :メールアドレス %>
+    <%#= f.text_field :メールアドレス %>
+    
+    <%#= f.label :パスワード %>
+    <%#= f.text_field :パスワード %>
+    
+    <%#= f.submit %>
+    
+  <%# end %>
+  
+  <p>
+    ＜採用担当者様　専用アカウント＞
+    <br>
+    メールアドレス：
+    <br>
+    パスワード：
+    <br>
+    ※　フォームに予め入力済
+  </p>
+</div> 
