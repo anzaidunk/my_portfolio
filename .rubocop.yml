@@ -22,6 +22,11 @@ Documentation:
 ClassAndModuleChildren:
   Enabled: false
 
+# Block has too many linesを無視する
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 # 文字リテラルのイミュータブル宣言を無視（freezeになるのはRuby3以降）
 Style/FrozenStringLiteralComment:
   Enabled: false
