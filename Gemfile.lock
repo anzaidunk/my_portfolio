@@ -61,6 +61,7 @@ GEM
     ast (2.4.1)
     autoprefixer-rails (10.0.1.0)
       execjs
+    bcrypt (3.1.12)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -257,6 +258,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.12)
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.3.1)
   byebug
@@ -272,7 +274,6 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sassc-rails
-  selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
