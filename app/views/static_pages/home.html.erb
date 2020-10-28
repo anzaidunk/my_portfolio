@@ -1,29 +1,33 @@
 <% provide(:title, "Home") %>
-<div class="center recruit-login" >
+
+<div class="center login">
   <h1>【採用担当者様　専用ログインフォーム】</h1>
   <h2>
     下記の「専用ログイン」ボタンを押していただければ、
     <br>
     すぐに専用アカウントでログインが可能です。
   </h2>
-  <%#= form_for() do |f| %>
-    
-    <%#= f.label :メールアドレス %>
-    <%#= f.text_field :メールアドレス %>
-    
-    <%#= f.label :パスワード %>
-    <%#= f.text_field :パスワード %>
-    
-    <%#= f.submit %>
-    
-  <%# end %>
-  
+  <div class="form-group">
+    <%= form_with(model: @user, url: "", local: true) do |f| %>
+      <div class="form-indi">
+        <%= f.label :メールアドレス %>
+        <%= f.email_field :email, class: 'form-control', value: "moveapp@example.com"%>
+      </div>
+      <div class="form-indi">
+        <%= f.label :パスワード %>
+        <%= f.password_field :password, class: 'form-control', value: "password"%>
+      </div>
+      <div class="form-indi">
+        <%= f.submit "専用ログイン", class: "btn" %>
+      </div>
+    <% end %>
+  </div>
   <p>
     ＜採用担当者様　専用アカウント＞
     <br>
-    メールアドレス：
+    メールアドレス：moveapp@example.com
     <br>
-    パスワード：
+    パスワード：password
     <br>
     ※　フォームに予め入力済
   </p>
