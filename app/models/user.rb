@@ -10,8 +10,8 @@ class User < ApplicationRecord
 
   private
 
-    # メールアドレスをすべて小文字にする
-    def downcase_email
-      email.downcase!
-    end
+  # メールアドレスをすべて小文字にする
+  def downcase_email
+    email.downcase!
+  end
 end
