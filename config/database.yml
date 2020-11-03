@@ -47,3 +47,4 @@ production:
   username: railsuser
   password: railspass
   host: localhost
+  socket: /var/lib/mysql/mysql.sock
