@@ -12,6 +12,11 @@ RSpec.describe "SiteLayouts", type: :system do
       visit root_path
       expect(page).to have_link 'ユーザー登録（無料）', href: signup_path
     end
+    
+    it "contains about link" do
+      visit about_path
+      expect(page).to have_link 'MOVEとは？', href: about_path
+    end
   end
   
 end
