@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  
   let(:user) { create(:user) }
 
   describe 'User' do
@@ -122,10 +121,10 @@ RSpec.describe User, type: :model do
       end
     end
   end
-  
-  describe "User model methods" do
-    describe "authenticated?" do
-      it "return false for a user with nil digest" do
+
+  describe 'User model methods' do
+    describe 'authenticated?' do
+      it 'return false for a user with nil digest' do
         expect(user.authenticated?('')).to be_falsey
       end
     end
