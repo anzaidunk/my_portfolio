@@ -18,7 +18,7 @@ gem 'sassc-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '3.2.0'
 gem 'webpacker', '~> 4.0'
-gem 'will_paginate',           '3.1.7'
+gem 'will_paginate', '3.1.7'
 # gem 'bootstrap-will_paginate', '1.0.0'
 gem 'will_paginate-bootstrap4'
 

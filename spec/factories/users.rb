@@ -6,7 +6,7 @@ FactoryBot.define do
     password_confirmation { 'password' }
     admin { true }
   end
-  
+
   factory :other_user, class: User do
     name { 'Second User' }
     email { 'luiji@example.com' }
