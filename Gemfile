@@ -18,6 +18,9 @@ gem 'sassc-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '3.2.0'
 gem 'webpacker', '~> 4.0'
+gem 'will_paginate', '3.1.7'
+# gem 'bootstrap-will_paginate', '1.0.0'
+gem 'will_paginate-bootstrap4'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -26,6 +29,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker', '1.7.3'
   gem 'listen', '~> 3.2'
   gem 'pre-commit'
   gem 'rubocop', require: false

@@ -1,0 +1,31 @@
+<% provide(:title, "プロフィール編集") %>
+
+<div class="container">
+  <div class="center">
+    <h1>プロフィール編集</h1>
+    <div class="form-group">
+      <%= form_with(model: @user, url: user_path(@user), local: true) do |f| %>
+        <%= render 'shared/error_messages' %>
+        <div class="form-indi">
+          <%= f.text_field :name, class: 'form-control', placeholder: "名前 （最大５０文字）" %>
+        </div>
+        <div class="form-indi">
+          <%= f.email_field :email, class: 'form-control', placeholder: "メールアドレス" %>
+        </div>
+        <div class="form-indi">
+          <%= f.password_field :password, class: 'form-control', placeholder: "パスワード （最小６文字）" %>
+        </div>
+        <div class="form-indi">
+          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "パスワード （再入力）" %>
+        </div>
+        <div class="form-indi">
+          <%= f.submit "編集", class: "btn" %>
+        </div>
+      <% end %>
+      <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <a href="http://gravatar.com/emails" target="_blank" rel="noopener">変更</a>
+      </div>
+    </div>
+  </div>
+</div>
