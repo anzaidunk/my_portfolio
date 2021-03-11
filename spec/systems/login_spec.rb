@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Logins', type: :system do
+  
   let(:user) {create(:user)}
 
   def submit_with_invalid_information
@@ -11,7 +12,7 @@ RSpec.describe 'Logins', type: :system do
 
   def submit_with_valid_information(remember_me = 0)
     fill_in 'メールアドレス', with: user.email
-    fill_in 'パスワード', with: 'password'
+    fill_in 'パスワード', with: user.password
     check 'session_remember_me' if remember_me == 1
     find('.btn').click
   end
