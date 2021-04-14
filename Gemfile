@@ -7,6 +7,7 @@ gem 'bcrypt', '3.1.12'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'coffee-rails', '4.2.2'
+gem 'faker', '1.7.3'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 # gem 'sqlite3', '~> 1.4'
@@ -29,7 +30,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'faker', '1.7.3'
   gem 'listen', '~> 3.2'
   gem 'pre-commit'
   gem 'rubocop', require: false
