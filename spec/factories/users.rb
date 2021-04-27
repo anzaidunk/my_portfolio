@@ -5,6 +5,7 @@ FactoryBot.define do
     password { 'password' }
     password_confirmation { 'password' }
     admin { true }
+    activated { true }
   end
 
   factory :other_user, class: User do
@@ -12,5 +13,13 @@ FactoryBot.define do
     email { 'luiji@example.com' }
     password { 'foobar' }
     password_confirmation { 'foobar' }
+    activated { true }
+  end
+
+  factory :no_activation_user, class: User do
+    name { 'Third User' }
+    email { 'third@example.com' }
+    password { 'three3' }
+    password_confirmation { 'three3' }
   end
 end
