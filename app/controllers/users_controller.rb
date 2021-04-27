@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   def show
@@ -18,9 +18,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = 'ＭＯＶＥへようこそ'
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = '認証用メールを送信しました。登録時のメールアドレスから認証を済ませてください'
+      redirect_to root_url
+      # log_in @user
+      # flash[:success] = 'ＭＯＶＥへようこそ'
+      # redirect_to @user
     else
       render 'new'
     end
