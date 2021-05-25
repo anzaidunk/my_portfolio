@@ -1,0 +1,17 @@
+<% provide(:title, "パスワード再設定") %>
+
+<div class="container">
+  <div class="center">
+    <h1>パスワード再設定</h1>
+    <div class="form-group">
+      <%= form_with(scope: :password_reset, url: password_resets_path, local: true) do |f| %>
+        <div class="form-indi">
+          <%= f.email_field :email, class: 'form-control', placeholder: "メールアドレス" %>
+        </div>
+        <div class="form-indi">
+          <%= f.submit "送信", class: "btn" %>
+        </div>
+      <% end %>   
+    </div>
+  </div>
+</div>

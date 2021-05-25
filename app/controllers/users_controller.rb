@@ -21,9 +21,6 @@ class UsersController < ApplicationController
       @user.send_activation_email
       flash[:info] = '認証用メールを送信しました。登録時のメールアドレスから認証を済ませてください'
       redirect_to root_url
-      # log_in @user
-      # flash[:success] = 'ＭＯＶＥへようこそ'
-      # redirect_to @user
     else
       render 'new'
     end
@@ -32,7 +29,7 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    if @user.update_attributes(user_params)
+    if @user.update(user_params)
       flash[:success] = 'プロフィールの更新に成功しました'
       redirect_to @user
     else
@@ -55,11 +52,12 @@ class UsersController < ApplicationController
   end
 
   def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = 'ログインして下さい'
-      redirect_to login_url
-    end
+    # unless logged_in?
+    return if logged_in?
+
+    store_location
+    flash[:danger] = 'ログインして下さい'
+    redirect_to login_url
   end
 
   def correct_user
