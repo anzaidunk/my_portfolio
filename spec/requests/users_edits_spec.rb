@@ -67,8 +67,8 @@ RSpec.describe 'UsersEdits', type: :request do
         get edit_user_path(user)
         expect(request.fullpath).to eq edit_user_path(user)
         patch_valid_information
-        expect(flash[:success]).to be_truthy
         follow_redirect!
+        expect(flash[:success]).to be_truthy
         expect(request.fullpath).to eq user_path(user)
       end
 

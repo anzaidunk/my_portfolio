@@ -284,7 +284,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   coffee-rails (= 4.2.2)
   factory_bot_rails
-  faker (= 1.7.3)
+  faker
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)

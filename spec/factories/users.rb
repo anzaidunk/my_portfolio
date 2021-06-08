@@ -21,5 +21,6 @@ FactoryBot.define do
     email { 'third@example.com' }
     password { 'three3' }
     password_confirmation { 'three3' }
+    activated { false }
   end
 end
