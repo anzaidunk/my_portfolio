@@ -7,11 +7,10 @@ gem 'bcrypt', '3.1.12'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'coffee-rails', '4.2.2'
-gem 'faker', '1.7.3'
+gem 'faker'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
-# gem 'sqlite3', '~> 1.4'
-gem 'mysql2', '>= 0.3.18', '< 0.6.0' # DB変更
+gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'rails-i18n'
@@ -20,7 +19,6 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '3.2.0'
 gem 'webpacker', '~> 4.0'
 gem 'will_paginate', '3.1.7'
-# gem 'bootstrap-will_paginate', '1.0.0'
 gem 'will_paginate-bootstrap4'
 
 group :development, :test do

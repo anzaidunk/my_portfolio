@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form-group">
+    <h1>コメント投稿</h1>
+    <%= form_with(model: @micropost, url: microposts_path, local: true) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="form-indi">
+        <%= f.text_area :content, class: 'form-control', placeholder: "コメント" %>
+      </div>
+      <div class="form-indi">
+        <%= f.submit "投稿", class: "btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

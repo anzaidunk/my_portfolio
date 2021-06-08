@@ -29,8 +29,8 @@ RSpec.describe 'UsersIndexs', type: :request do
         expect do
           delete user_path(other_user)
         end.to change(User, :count).by(-1)
-        expect(flash[:success]).to be_truthy
         follow_redirect!
+        expect(flash[:success]).to be_truthy
         expect(request.fullpath).to eq users_path
       end
     end
